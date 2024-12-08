@@ -18,7 +18,7 @@ const dictionary = (word) => {
         .then((response) => {
             console.log(response)
             wordElement.innerHTML = response.word; 
-            definationElement.innerHTML = response.definition; 
+            definationElement.innerHTML = response.definition.replace("2.","<br>2.").replace("3.","<br>3.").replace("4.","<br>4."); 
         })
         .catch(err => console.error(err));
 }
